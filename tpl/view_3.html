@@ -1,0 +1,41 @@
+<div class="container">
+    <div id="piechart" style="display: block"></div>
+    <script>
+        Highcharts.chart('piechart', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Browser market shares January, 2017 to Decmber, 2017'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Chrome',
+                    y: 56.33
+                }, {
+                    name: 'Edge',
+                    y: 24.03,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Firefox',
+                    y: 10.38
+                }, {
+                    name: 'Safari',
+                    y: 4.77
+                }, {
+                    name: 'Opera',
+                    y: 0.91
+                }, {
+                    name: 'Other',
+                    y: 0.2
+                }]
+            }]
+        });
+    </script>
+</div>
